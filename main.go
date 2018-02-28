@@ -6,22 +6,16 @@ import (
 	"os"
 )
 
-const (
-	CONN_HOST = "localhost"
-	CONN_PORT = "3333"
-	CONN_TYPE = "tcp"
-)
-
 func main() {
 	// Listen for incoming connections.
-	l, err := net.Listen(CONN_TYPE, "0.0.0.0:"+CONN_PORT)
+	l, err := net.Listen("tcp", ":3333")
 	if err != nil {
 		fmt.Println("Error listening:", err.Error())
 		os.Exit(1)
 	}
 	// Close the listener when the application closes.
 	defer l.Close()
-	fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
+	fmt.Println("Listening on  :3333")
 	for {
 		// Listen for an incoming connection.
 		conn, err := l.Accept()
