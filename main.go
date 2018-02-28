@@ -14,7 +14,7 @@ const (
 
 func main() {
 	// Listen for incoming connections.
-	l, err := net.Listen(CONN_TYPE, ":"+CONN_PORT)
+	l, err := net.Listen(CONN_TYPE, "0.0.0.0:"+CONN_PORT)
 	if err != nil {
 		fmt.Println("Error listening:", err.Error())
 		os.Exit(1)
