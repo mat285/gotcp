@@ -1,2 +1,3 @@
 accessibility: protected
 containerPort: 3333
+protocol: TCP
