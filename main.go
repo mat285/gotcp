@@ -15,7 +15,7 @@ func main() {
 	}
 	// Close the listener when the application closes.
 	defer l.Close()
-	fmt.Println("Listening on  :3333")
+	fmt.Println("Listening on :3333")
 	for {
 		// Listen for an incoming connection.
 		conn, err := l.Accept()
